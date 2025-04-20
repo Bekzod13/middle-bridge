@@ -1,11 +1,54 @@
+import axios from "axios";
+import { useState } from "react";
 import { FiMail } from "react-icons/fi";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { IoCallOutline } from "react-icons/io5";
 import { PiPaperPlaneTiltBold } from "react-icons/pi";
 
-const MainForm = () => {
+const MainForm = (props: {title: string}) => {
+
+    const {title} = props;
+    const CHAT_ID = "-4606499056";
+    const BOT_TOKEN = "7599591466:AAF_SqIpp-n4_vrtvzWtbzTybxrlvSCDxms";
+    const [name, setName] = useState("");
+    const [phone, setPhone] = useState("");
+    const [message, setMessage] = useState("");
+
+
+    const sendTelegramMessage = async () => {
+        if(phone === "" && name === "")
+        {
+            window.alert("Siz formani to'ldirmadingiz")
+        } else{
+        const text = `Ism: ${name}
+Telefon: ${phone}
+Xabar: ${message}
+        `;
+        try {
+            const response = await axios.post(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+                chat_id: CHAT_ID,
+                text: text
+            });
+            if(response.status === 200)
+            {
+                setName("");
+                setPhone("");
+                setMessage("");
+                window.alert("Xabar muvaffaqyatli yuborildi!")
+            }
+            return response.data;
+            } catch (error) {
+                console.log(error);
+            throw error;
+            }
+        }
+ 
+
+      }
+
+
     return <div className="c-container mt-[50px]">
-        <h1 className="text-[#3B82F6] text-[48px] text-center font-bold">Bog'lanish</h1>
+        <h1 className="text-[#3B82F6] text-[48px] text-center font-bold">{title}</h1>
         <p className="text-[#374151] text-[18px] text-center">Biz bilan bog'lanish uchun quyidagi ma'lumotlarni kiriting.</p>
         <div className="flex gap-[20px] mt-[20px]">
             <div className="w-[60%] shadow rounded-[10px] px-[30px] py-[40px]">
@@ -14,21 +57,21 @@ const MainForm = () => {
                 <div className="flex gap-3 mt-[10px]">
                     <div className="flex flex-col w-[50%]">
                         <label htmlFor="name">Ism</label>
-                        <input type="text" name="name" id="name" className="border rounded-md border-[#E2E8F0] p-[10px]"  placeholder="Ism"/>
+                        <input type="text" name="name" id="name" className="border rounded-md border-[#E2E8F0] p-[10px]" value={name}  placeholder="Ism" onChange={(e: any) => setName(e.target.value)}/>
                     </div>
                     <div className="flex flex-col w-[50%]">
                         <label htmlFor="phone">Telefon raqam</label>
-                        <input type="number" name="phone" id="phone"  className="border rounded-md border-[#E2E8F0] p-[10px]"  placeholder="+9989"/>
+                        <input type="number" name="phone" id="phone"  className="border rounded-md border-[#E2E8F0] p-[10px]" value={phone}  placeholder="+9989" onChange={(e: any) => setPhone(e.target.value)}/>
                     </div>
                 </div>
                 <div className="flex gap-3 mt-[10px]">
                     <div className="flex flex-col w-[100%]">
                         <label htmlFor="message">Xabar</label>
-                        <textarea  name="message" id="message"  className="border rounded-md border-[#E2E8F0] p-[10px] h-[120px]"  placeholder="Xabar"/>
+                        <textarea  name="message" id="message"  className="border rounded-md border-[#E2E8F0] p-[10px] h-[120px]" value={message}  placeholder="Xabar" onChange={(e: any) => setMessage(e.target.value)}/>
                     </div>
                 </div>
                 <div className="flex justify-center">
-                    <div  className="text-[14px] w-[157px] h-[48px] rounded-[30px] bg-[#2563EB] text-white flex justify-center items-center gap-2 mt-[30px]">
+                    <div onClick={sendTelegramMessage} className="text-[14px] w-[157px] h-[48px] rounded-[30px] bg-[#2563EB] text-white flex justify-center items-center gap-2 mt-[30px]">
                         <PiPaperPlaneTiltBold />
                         <span>Yuborish</span>
                     </div>
