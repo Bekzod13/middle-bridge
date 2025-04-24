@@ -14,7 +14,8 @@ export const programs = [
             'Minimal til darajasi (TOPIK 1 yoki ichki suhbat)',
             'Koreyada yashashga ruxsat olish uchun sog‘liq haqida ma’lumot'
         ],
-        img: program1
+        img: program1,
+        link: "kasbiy-talim"
     },
     {
         id: 2,
@@ -26,7 +27,8 @@ export const programs = [
             'Koreys tilini bilish talab qilinmaydi',
             'O‘qish muddati: 1 yil'
         ],
-        img: program2
+        img: program2,
+        link: "til-kursi"
     },
     {
         id: 3,
@@ -38,7 +40,8 @@ export const programs = [
             'Motivatsion xat va tavsiyanoma',
             'Bank hisoboti va ota-ona moliyaviy kafolati'
         ],
-        img: program3
+        img: program3,
+        link: "bakalavr"
     },
     {
         id: 4,
@@ -50,7 +53,8 @@ export const programs = [
             'Ilmiy reja (study plan) va 1-2 tavsiyanoma',
             'Pasport, bank hisoboti, sog‘liq haqida ma’lumot'
         ],
-        img: program4
+        img: program4,
+        link: "magistratura"
     },
 
 ];

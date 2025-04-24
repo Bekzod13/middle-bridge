@@ -31,7 +31,7 @@ const Program = () => {
                             <IoBookmarkSharp  className="text-[70px] text-white  "/>
                             <span className="absolute top-[15%] left-[33%] text-[20px] font-bold">0{program.id}</span>
                         </div>
-                        <Link to={"/"} className={`text-[14px] w-[157px] h-[48px] rounded-[30px] bg-[#2563EB] text-white flex justify-center items-center gap-2  absolute  bottom-[20px] ${program.id % 2 === 0 ? "left-[20px]" : "right-[20px]"}`}>
+                        <Link to={"/" + program.link + "#header"} className={`text-[14px] w-[157px] h-[48px] rounded-[30px] bg-[#2563EB] text-white flex justify-center items-center gap-2  absolute  bottom-[20px] ${program.id % 2 === 0 ? "left-[20px]" : "right-[20px]"}`}>
                             <span>Batafsil</span>
                         </Link>
                     </div>

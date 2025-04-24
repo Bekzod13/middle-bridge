@@ -6,7 +6,7 @@ import { LuLightbulb } from "react-icons/lu";
 import { GrSearch, GrVisa } from "react-icons/gr";
 import { MdWorkOutline } from "react-icons/md";
 
-const Content = () => {
+const Content = (props:  { handleScroll: any, sectionRef: any}) => {
     let {page} = useParams();
     page = page ? page : "bakalavr"
     // @ts-ignore 
@@ -67,7 +67,7 @@ const Content = () => {
                 </>:<></>
             }
         </div>
-        <MainForm  title={"Bepul konsultatsiya va ariza"}/>
+        <MainForm  sectionRef={props.sectionRef} title={"Bepul konsultatsiya va ariza"}/>
     </> 
 }
 

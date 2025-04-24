@@ -20,7 +20,7 @@ const  Navbar = () => {
       };
      
     return <>
-        <header className="border-b-2 bg-white border-[#DDB38E] fixed top-0 left-0 right-0 h-[80px] z-[100]">
+        <header className="border-b-2 bg-white border-[#DDB38E] fixed top-0 left-0 right-0 h-[80px] z-[100]" id="header">
             <nav className="c-container  flex items-center justify-between  h-full">
                 <Link to={'/'}>
                     <img src={logo} alt="logo" className="h-[40px] object-contain" />

@@ -5,9 +5,9 @@ import { HiOutlineLocationMarker } from "react-icons/hi";
 import { IoCallOutline } from "react-icons/io5";
 import { PiPaperPlaneTiltBold } from "react-icons/pi";
 
-const MainForm = (props: {title: string}) => {
+const MainForm = (props: {title: string, sectionRef: any}) => {
 
-    const {title} = props;
+    const {title, sectionRef} = props;
     const CHAT_ID = "-4606499056";
     const BOT_TOKEN = "7599591466:AAF_SqIpp-n4_vrtvzWtbzTybxrlvSCDxms";
     const [name, setName] = useState("");
@@ -47,7 +47,7 @@ Xabar: ${message}
       }
 
 
-    return <div className="c-container mt-[50px]">
+    return <div className="c-container mt-[50px]" ref={sectionRef}>
         <h1 className="text-[#3B82F6] text-[48px] text-center font-bold">{title}</h1>
         <p className="text-[#374151] text-[18px] text-center">Biz bilan bog'lanish uchun quyidagi ma'lumotlarni kiriting.</p>
         <div className="flex gap-[20px] mt-[20px]">

@@ -5,13 +5,13 @@ import MainForm from "../components/MainForm";
 import Program from "../components/Program";
 import Result from "../components/Result";
 
-const Main = () => {
+const Main = (props: {handleScroll: any, sectionRef: any}) => {
     return  <>
-        <Banner/>
+        <Banner  handleScroll={props.handleScroll} />
         <About/>
         <Program/>
         <Result/>
-        <MainForm  title={"Bog'lanish"}/>
+        <MainForm sectionRef={props.sectionRef} title={"Bog'lanish"}/>
         <CMap/>
     </>
 }
