@@ -3,6 +3,7 @@ import program2 from './assets/program2.png';
 import program3 from './assets/program3.png';
 import program4 from './assets/program4.png';
 import cert from './assets/cert.png';
+import user from './assets/user.jpg';
 
 export const programs = [
     {
@@ -236,3 +237,42 @@ export const talim = {
         } 
     }
 }
+
+export const teachers = [
+    {
+        id: 1,
+        name: "KHAMIDOV DILSHOD",
+        description: "Khamidov Dilshod — Korean School asoschisi, TOPIK 6 ball egasi. Har 2 oyda TOPIK 2 darslarini olib boradi. Koreyada o‘qishni istaganlarga bepul konsultatsiya berib, talaba bo‘lguncha to‘liq ko‘maklashadi. Tajribali, samimiy va ishonchli ustoz.",
+        image: user
+    },
+    {
+        id: 2,
+        name: "TO’LQINOV HAMIDJON",
+        description: "To‘lqinov Hamidjon — koreys tili ustozi, TOPIK 6 darajasiga ega. Darslari samarali va tushunarli bo‘lib, ko‘plab shogirdlari yuqori TOPIK natijalariga erishgan. Tajribali va talabalarni natijaga yetaklaydigan fidoyi ustoz.",
+        image: user
+    },
+    {
+        id: 3,
+        name: "BOSIMQULOV DONYOR",
+        description: "Bosimqulov Donyor — TOPIK 6 ball egasi, koreys tili darslarini qiziqarli va sodda tarzda olib boradi. O‘quvchilarini yuqori natijalarga yetaklay oladigan tajribali va samarali ustoz.",
+        image: user
+    },
+    {
+        id: 4,
+        name: "MAXKAMOV BOBURSHOX",
+        description: "Maxkamov Boburshox — koreys tilini chuqur biladigan, talabchan va ayni paytda do‘stona muhit yaratadigan ustoz. Har bir darsida o‘quvchilarni faollikka undaydi, murakkab mavzularni oddiy va tushunarli qilib tushuntiradi.",
+        image: user
+    },
+    {
+        id: 5,
+        name: "TIRKASHEVA SEVENCH",
+        description: "Tirkasheva Sevench — mehribon, sabrli va o‘z ishiga mas’uliyat bilan yondashadigan koreys tili ustozidir. Har bir o‘quvchiga individual e’tibor beradi, darslarni tushunarli va iliq muhitda olib boradi. Til o‘rganishni oson va yoqimli qiladigan ustozlardan biri.",
+        image: user
+    },
+    {
+        id: 6,
+        name: "LAPASOVA FARANGIZ ",
+        description: "Lapasova Farangiz — koreys tilini mukammal o‘rgatadigan, faol va g‘ayratli ustoz. Darslari qiziqarli, tushunarli va natijaga yo‘naltirilgan. Har bir o‘quvchining rivojlanishiga alohida yondashadi. Til o‘rganishda motivatsiya beradigan ilhomlantiruvchi o‘qituvchi.",
+        image: user
+    },
+]

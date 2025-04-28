@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
 import { useRef } from "react"
 import { ScrollToTop } from './ScrollToTop';
+import Teacher from "./pages/Teacher"
 
 function App() {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -19,6 +20,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Main handleScroll={handleScroll} sectionRef={sectionRef} />} />
+        <Route path="/korean" element={<Teacher/>}/>
         <Route path="/:page" element={<Content  handleScroll={handleScroll} sectionRef={sectionRef}/>} />
       </Routes>
       <Footer/>

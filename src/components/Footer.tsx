@@ -6,7 +6,7 @@ import { LuLinkedin } from "react-icons/lu";
 import { FaInstagram } from 'react-icons/fa';
 
 const Footer = () => {
-    return <footer className='bg-blue-50'>
+    return <footer className='relative'>
         <div className="c-container">
             <div>
                 <img src={logo} alt="logo" className='h-[60px]'/>
@@ -57,6 +57,9 @@ const Footer = () => {
                 © 2025 Middle Bridge. Barcha huquqlar himoyalangan.
             </div>
         </div>
+        <div className='z-[-1] absolute top-0 left-0 right-0 w-[100%] h-[100%] bg-gradient-to-r from-gray-50 to-gray-100'></div>
+        <div className="blur-[10px] bg-[#2563EB0D] w-[250px] h-[300px] rounded-full absolute bottom-[30px] right-[35%]"></div>
+        <div className="blur-[10px] bg-[#2563EB0D] w-[380px] h-[470px] rounded-full absolute bottom-[40px] left-[35%]"></div>
     </footer>
 }
 
